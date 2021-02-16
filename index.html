@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <title>おそかわ</title>
+        <style>
+            .login-text {
+                text-align: center;
+            }
+        </style>
+        <script>
+            console.log('jsの実行を始めるよ')
+
+            window.addEventListener('DOMContentLoaded', () => {
+                const loginButton = document.getElementById('login-button')
+                const username = document.getElementById('username')
+                const password = document.getElementById('password')
+
+                console.log('HTMLの読み込みが終わったよ')
+
+                loginButton.addEventListener('click', () => {
+                    const names = ['おそかわ', '遅川', 'osokawa', 'Osokawa']
+                    const pw = 'sex'
+                    console.log(username.value)
+                    console.log(password.value)
+
+                    if (names.includes(username.value)) {
+                        alert('性交')
+                        if (pw === password.value) {
+                            alert('挿入')
+                            window.location.href = 'osokawa.html'
+                        } else {
+                            alert('挿入できなかったね...')
+                        }
+                    } else {
+                        alert('無理')
+                    }
+                })
+                console.log('ボタンのことをメモったよ')
+            })
+            
+            console.log('jsの実行が終わったよ')
+        </script>
+    </head>
+    <body>
+        <h1 class="login-text">ログインしよう！</h1>
+        <div>
+            <label>あなたの名前は？</label><input type="text" id="username">
+        </div>
+        <div>
+            <label>合言葉は？</label><input type="password" id="password">
+        </div>
+        <button type="button" id="login-button">はじめよう</button>
+    </body>
+</html>
